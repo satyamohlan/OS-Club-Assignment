@@ -1,0 +1,130 @@
+body{
+    overflow: hidden;
+    color: white;
+}
+.container{
+    width: 100vw;
+    height:100vh;
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+.container::after{
+    content:'';
+    background-image: url('../assets/pexels-pixabay-41951.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+.container  h1{
+    font-family: 'Oswald',sans-serif ;
+    font-size:60px;
+    text-align: center;
+    margin: 30px;
+    
+}
+.tiers{
+    display: flex;
+    flex-wrap:wrap;
+    width:100%;
+    justify-content: center;
+    gap:100px;
+    padding:20px;
+    height: fit-content;
+    margin: auto;
+}
+.tier{
+    background-color: rgba(0,0,0,0.75);
+    padding: 20px;
+    display: grid;
+    grid-template-rows: min-content min-content min-content min-content;
+    width:400px;
+    border-radius: 25px;
+    align-self:center;
+    max-height: fit-content;
+}
+.tier img.one{
+    transform: scale(1.32);
+}
+.tier h3{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+    font-family: 'MuseoModerno',sans-serif;
+    background: rgba(0, 0, 0, 0.7);
+    width: fit-content;
+    margin: auto;
+    margin-bottom: revert;
+    margin-top: revert;
+    height: fit-content;
+}
+.tier h3#one{
+    color: #AED581;}
+.tier h3#two{
+    color: #FFD54F;}
+    .tier h3#three{
+        color:#ff4d15;
+        
+    }
+.tier h3 span{
+    text-shadow:0 0 40px #d2d3d7;
+
+    color:whitesmoke;
+    background: none;
+    font-size: 40px;
+}
+.tier h3 span sup{
+    font-family: 'Roboto',sans-serif;
+    font-size: 20px;
+}
+
+.tier img{
+    margin: auto;
+    height: 200px;
+    padding: 10px;}
+div.info{
+    font-family: 'Roboto Mono',sans-serif;
+    padding: 10px;
+    display: grid;
+    margin: auto;
+}
+div.point h5{
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0;
+}
+div.point p{
+    font-size: 14px;
+    
+    color: #ecebeb;
+    font-weight: 300;
+}
+
+div.tier button{
+    height: 50px;
+    padding: 7.5px;
+    border-radius: 5px;
+    margin: 0px 6px;
+    background-color: #FF8A65;
+    border: none;
+
+}
+div.point p.crossed{
+    color:#878787;
+}
+.point {
+    margin: 5px 0px;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masonry Gallery Layout</title>
+    <link rel="stylesheet" href="styles/init.css">
+    <link rel="stylesheet" href="styles/masonry.css">
+</head>
+<body>
+    <div class="container">
+        
+    </div>
+</body>
+<script>
+getphotos();
+function getphotos() {
+        var relpath="./assets/masonry/";
+    var photos=["20210718_004836.jpg","20210718_004844.jpg","bread.jpg","bridge.jpg","burgers_food.jpeg","city_skyline.jpeg","diving.jpg","flowers_sunset.jpg","forest.jpg","giraffe.jpg","golden_gate_bridge.jpg","historical-building.jpeg","horses.jpg","house_architecture.jpeg","IMG_20190222_164157.jpg","IMG_20190222_164829.jpg","IMG_20190222_165024.jpg","IMG_20190331_182829.jpg","iphone_charging.jpg","iphone_notes.jpg","leaning_tower_of_pisa.jpg","lenses.jpeg","macbook_iphone.jpeg","mona_lisa.jpeg","path_in_forest.jpg","pexels-anthony-)-158834.jpg","pexels-dom-j-45717.jpg", "pexels-element-digital-1370295.jpg","pexels-pixabay-207732.jpg","red-and-yellow-wallpaper-891030.jpg","restaurant_dinner.jpeg","restaurant_food.jpeg","rose_flower.jpeg", "sea_beach.jpg", "sea_waves.jpg","semi-opened-laptop-computer-turned-on-on-table-2047905.jpg","sheep.jpeg","shoes.jpg","suit_businessman.jpeg","sunset_sea.jpg","taking_picture.jpeg","taxi_traffic.jpeg","tools.jpg","tour_de_france.jpg","tree_sunset.jpg","trees.jpg","typing_keyboard.png", "waves_surfing.jpg","writting_letter.jpg","yellow-and-and-blue-colored-pencils-1762851.jpg"];
+   var container=document.querySelector(".container");
+   photos.forEach((val)=>{
+    var image=document.createElement("img");
+    image.src=relpath+val;
+    container.appendChild(image);
+})
+}
+    
+</script>
+</html>

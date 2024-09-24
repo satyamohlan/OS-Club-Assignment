@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Generater</title>
+    <link rel="stylesheet" href="styles/init.css">
+    <link rel="stylesheet" href="styles/shape.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Oswald&family=Montesserat&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Random Shape Generator</h1>
+        <button class="btn" onclick="generate()">Refresh</button>
+        <div class="shape-container">
+  
+
+
+        </div>
+    </div>
+</body>
+<script>
+    document.addEventListener(onload,generate());
+    function generate(){
+        var container=document.querySelector('.shape-container');
+        container.innerHTML="";
+        for (let i = 0; i < 25; i++) {
+            const shape=document.createElement("div");
+            shape.classList.add("shape");
+            var r1=Math.ceil(Math.random()*8);
+            var r2=Math.ceil(Math.random()*8);
+
+            shape.classList.add("shape"+r1);
+            shape.classList.add("shape-color"+r2);
+
+            container.appendChild(shape)            
+            
+        }
+    }
+</script>
+</html>

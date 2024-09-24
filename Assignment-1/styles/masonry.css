@@ -1,0 +1,14 @@
+.container{
+    width: 100vw;
+    
+    gap:30px;
+    columns: 4;
+    
+    gap: 15px;
+    padding: 15px;
+}
+.container img{
+    width: calc(100vw / 4 - 20px);
+    border-radius: 20px;
+    padding: 10px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<link rel="stylesheet" href="styles/init.css">
+<link rel="stylesheet" href="styles/clock-style.css">
+<body>
+    <div class="container">
+        <div class="time"></div>
+        <div class="clock">
+            <div class="clock-center">
+                <div class="han-hour"></div>
+                <div class="han-min"></div>
+                <div class="han-sec"><span id="blob"></span></div>
+            </div>
+                <span class="hour"><i>I </i></span>
+                <span class="hour"><i>II</i></span>
+                <span class="hour"><i>III</i></span>
+                <span class="hour"><i>IV</i></span>
+                <span class="hour"><i>V</i></span>
+                <span class="hour"><i>VI</i></span>
+                <span class="hour"><i>VII</i></span>
+                <span class="hour"><i>VII</i></span>
+                <span class="hour"><i>IX</i></span>
+                <span class="hour"><i>X</i></span>
+                <span class="hour"><i>XI</i></span>
+                <span class="hour"><i>XII</i></span>
+            
+
+        </div>
+
+    </div>
+</body>
+<script>
+setInterval(()=>{
+    var hourhand=document.querySelector('.han-hour');
+var minhand=document.querySelector('.han-min');
+var sechand=document.querySelector('.han-sec');
+
+var time=new Date();
+var hours=((6+time.getHours()+time.getMinutes()/60)*30)%360;
+var minutes=((30+time.getMinutes()+time.getSeconds()/60)*6)%360;
+var seconds=((30+time.getSeconds())*6)%360;
+
+hourhand.style.setProperty('--hrot',hours+'deg');
+minhand.style.setProperty('--minrot',minutes+'deg');
+sechand.style.setProperty('--secrot',seconds+'deg');
+
+},1000);
+
+</script>
+</html>
